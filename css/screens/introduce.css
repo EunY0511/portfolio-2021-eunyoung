@@ -1,0 +1,56 @@
+.main__intro {
+  font-family: "Hi Melody", cursive;
+}
+
+.my__intro {
+  margin-top: -10vw;
+}
+
+.my__intro-title,
+.skill__used-title {
+  font-size: 3.2rem;
+  line-height: 5rem;
+  text-align: center;
+}
+
+/* i am만 따로 패딩 줌 */
+.my__intro-title {
+  padding-right: 25%;
+}
+
+.my__intro-content,
+.skill__used-text {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.skill__used {
+  margin-top: 15vw;
+}
+
+/* 타이틀과 아래 내용 사이 간격 줌 */
+.skill__used-title {
+  margin-bottom: 2vw;
+}
+
+/* 이미지 사진들 미세 조정 */
+.skill__used-img img {
+  width: 150px;
+  padding: 4% 2%;
+}
+
+.skill__used-img img:nth-child(2) {
+  width: 155px;
+  height: 153px;
+  padding: 4% 2%;
+}
+
+.skill__used-img img:nth-child(2),
+.skill__used-img img:last-child {
+  border-radius: 30%;
+}
+
+.fa-caret-right {
+  margin-right: 10px;
+}
