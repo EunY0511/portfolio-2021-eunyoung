@@ -70,13 +70,12 @@
 }
 
 .nav__icon {
-  list-style: none;
   color: var(--font-color);
   display: flex;
-  padding-left: 0;
+  font-size: 2.5rem;
 }
 
-.nav__icon span {
+.nav__icon a {
   padding: 8px 15px;
 }
 

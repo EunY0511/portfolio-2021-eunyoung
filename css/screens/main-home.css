@@ -1,0 +1,103 @@
+main {
+  color: var(--font-color);
+  padding: 25vh 0vw;
+  text-align: center;
+}
+
+.main__animation {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  width: 20rem;
+  margin-bottom: 50px;
+}
+
+.main__animation svg {
+  display: inline-block;
+  margin: 0 -0.01em;
+  animation: loading 6s infinite alternate;
+}
+
+.main__animation svg:first-child {
+  opacity: 0.1;
+  animation-delay: 1s;
+}
+
+.main__animation svg:nth-child(2) {
+  opacity: 0.3;
+  width: 120%;
+  animation-delay: 1.5s;
+}
+
+.main__animation svg:nth-child(3) {
+  opacity: 0.5;
+  width: 140%;
+  animation-delay: 2s;
+}
+
+.main__animation svg:nth-child(4) {
+  opacity: 0.7;
+  width: 160%;
+  animation-delay: 2.5s;
+}
+
+.main__animation svg:nth-child(5) {
+  opacity: 0.9;
+  width: 180%;
+  animation-delay: 3s;
+}
+
+.main__animation svg:last-child {
+  opacity: 1;
+  width: 200%;
+  animation-delay: 3.5s;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0.1;
+    transform: translateY(0);
+  }
+  20% {
+    opacity: 0.3;
+    transform: translateY(-15px);
+  }
+  40% {
+    opacity: 0.5;
+    transform: translateY(-15px);
+  }
+  60% {
+    opacity: 0.7;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 0.85;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.main__text {
+  font-family: "Hi Melody", cursive;
+  font-size: 1.5rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  color: var(--font-color);
+  position: sticky;
+  top: 100%;
+  margin: 3vh 0vw;
+  font-size: 1.2rem;
+}
+
+footer span {
+  padding: 3px 0px;
+}
+
+footer .fa-mobile-alt {
+  padding: 0px 3px;
+}
