@@ -88,10 +88,9 @@ footer {
   display: flex;
   flex-direction: column;
   color: var(--font-color);
-  position: sticky;
-  top: 100%;
-  margin: 3vh 0vw;
+  position: fixed;
   font-size: 1.2rem;
+  padding: 20vh 5vw;
 }
 
 footer span {
