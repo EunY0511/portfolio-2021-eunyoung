@@ -1,0 +1,108 @@
+@import "reset.css";
+@import "variables.css";
+@import "nav-bar.css";
+@import "mouse.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=DM+Sans:ital,wght@0,400;0,500;1,400;1,500&family=Gamja+Flower&family=Handlee&family=Josefin+Sans:ital,wght@0,200;0,300;1,100;1,200;1,300&display=swap");
+
+body {
+  background-color: var(--back-color);
+  height: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  padding: 3vh 5vw;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  color: var(--font-color);
+  padding: 25vh 0vw;
+  text-align: center;
+}
+
+.roding__image {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  width: 20rem;
+  margin-bottom: 50px;
+}
+
+.roding__image svg {
+  display: inline-block;
+  margin: 0 -0.01em;
+  animation: loading 6s infinite alternate;
+}
+
+.roding__image svg:first-child {
+  opacity: 0.1;
+  animation-delay: 1s;
+}
+
+.roding__image svg:nth-child(2) {
+  opacity: 0.3;
+  width: 120%;
+  animation-delay: 1.5s;
+}
+
+.roding__image svg:nth-child(3) {
+  opacity: 0.5;
+  width: 140%;
+  animation-delay: 2s;
+}
+
+.roding__image svg:nth-child(4) {
+  opacity: 0.7;
+  width: 160%;
+  animation-delay: 2.5s;
+}
+
+.roding__image svg:nth-child(5) {
+  opacity: 0.9;
+  width: 180%;
+  animation-delay: 3s;
+}
+
+.roding__image svg:last-child {
+  opacity: 1;
+  width: 200%;
+  animation-delay: 3.5s;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0.1;
+    transform: translateY(0);
+  }
+  20% {
+    opacity: 0.3;
+    transform: translateY(-15px);
+  }
+  40% {
+    opacity: 0.5;
+    transform: translateY(-15px);
+  }
+  60% {
+    opacity: 0.7;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 0.85;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  color: var(--font-color);
+  position: sticky;
+  top: 100%;
+  padding: 3vh 5vw;
+}
