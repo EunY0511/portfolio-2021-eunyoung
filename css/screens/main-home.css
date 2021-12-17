@@ -1,6 +1,6 @@
 main {
   color: var(--font-color);
-  padding: 25vh 0vw;
+  padding: 45vh 0vw;
   text-align: center;
 }
 
@@ -88,9 +88,11 @@ footer {
   display: flex;
   flex-direction: column;
   color: var(--font-color);
-  position: fixed;
   font-size: 1.2rem;
-  padding: 20vh 5vw;
+  padding: 5vh 5vw;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--main-color);
 }
 
 footer span {
