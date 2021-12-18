@@ -79,9 +79,22 @@ main {
   }
 }
 
+.main__tittle {
+  font-family: "Dongle", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
 .main__text {
-  font-family: "Hi Melody", cursive;
-  font-size: 1.5rem;
+  list-style: circle;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin: 3vh 2vw;
+  padding: 2vh 40px;
+  text-align: start;
+  line-height: 38px;
+  border: 1px solid var(--font-color);
 }
 
 footer {

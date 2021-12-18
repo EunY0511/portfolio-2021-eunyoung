@@ -1,5 +1,5 @@
 .main__intro {
-  font-family: "Hi Melody", cursive;
+  font-family: "Dongle", sans-serif;
 }
 
 .my__intro {
@@ -35,22 +35,20 @@
 }
 
 /* 이미지 사진들 미세 조정 */
+
+.skill__used-img {
+  border-radius: 50px;
+}
+
 .skill__used-img img {
-  width: 150px;
-  padding: 4% 2%;
-}
-
-.skill__used-img img:nth-child(2) {
-  width: 155px;
-  height: 153px;
-  padding: 4% 2%;
-}
-
-.skill__used-img img:nth-child(2),
-.skill__used-img img:last-child {
+  width: 160px;
+  height: 190px;
+  padding: 5% 2%;
   border-radius: 30%;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .fa-caret-right {
-  margin-right: 10px;
+  margin-right: 8px;
 }
