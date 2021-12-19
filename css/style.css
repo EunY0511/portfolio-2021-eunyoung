@@ -4,11 +4,11 @@
 
 /* components */
 @import "components/nav-bar.css";
-@import "components/mouse.css";
 
 /* screens */
 @import "screens/main-home.css";
 @import "screens/introduce.css";
+@import "screens/project.css";
 
 body {
   background-color: var(--back-color);

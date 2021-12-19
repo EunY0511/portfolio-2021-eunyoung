@@ -1,27 +1,27 @@
 .main__intro {
   font-family: "Dongle", sans-serif;
+  margin-top: 10vh;
 }
 
 .my__intro {
-  margin-top: -10vh;
   display: flex;
   justify-content: center;
+  margin: 5vh 2vw;
 }
 
-.my__intro-title,
-.skill__used-title {
+/* 웹사이즈 작아졌을 때, 글이 통째로 밑으로 내려가게 하기 위해 */
+.my__intro-box {
+  min-width: max-content;
+}
+
+.my__intro-title {
   font-size: 3.5rem;
   line-height: 5rem;
   text-align: center;
-}
-
-/* i am만 따로 패딩 줌 */
-.my__intro-title {
   padding-right: 25%;
 }
 
-.my__intro-contents,
-.skill__used-text {
+.my__intro-contents {
   font-size: 2rem;
   letter-spacing: 1px;
   margin: 1vh 2vw;
@@ -30,40 +30,11 @@
   text-align: center;
 }
 
-.skill__used {
-  margin-top: 15vh;
-}
-
-/* 타이틀과 아래 내용 사이 간격 줌 */
-.skill__used-title {
-  margin-bottom: 2vh;
-}
-
-/* 이미지 사진들 미세 조정 */
-
-.skill__used-img {
-  border-radius: 50px;
-}
-
-.skill__used-img img {
-  width: 160px;
-  height: 190px;
-  padding: 5% 2%;
-  border-radius: 30%;
-  overflow: hidden;
-  object-fit: cover;
-}
-
-.fa-caret-right {
-  margin-right: 8px;
-}
-
 .my__intro-img img {
-  max-width: 350px;
+  max-width: 450px;
 }
 
 .my__intro-img {
-  /* display: inline-block; */
   position: relative;
 }
 
@@ -85,4 +56,69 @@
     display: flex;
     flex-direction: column;
   }
+
+  .my__intro-img img {
+    max-width: 100%;
+  }
+}
+
+.prev-btn,
+.next-btn {
+  border-radius: 4px;
+  background-color: var(--back-color);
+  border: none;
+  color: var(--font-color);
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 2vh;
+  width: 150px;
+  cursor: pointer;
+  margin: 5px 5vw;
+}
+
+.prev-btn span,
+.next-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+/* :after 가상 요소, content 필수 */
+.prev-btn span:after {
+  content: "\00ab";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+
+.next-btn span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+/* hover시 글씨 움직임 정도 */
+.prev-btn:hover span {
+  padding-left: 25px;
+}
+
+.next-btn:hover span {
+  padding-right: 25px;
+}
+
+.prev-btn:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
+.next-btn:hover span:after {
+  opacity: 1;
+  right: 0;
 }

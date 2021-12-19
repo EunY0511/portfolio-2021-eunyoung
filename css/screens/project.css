@@ -1,0 +1,46 @@
+main {
+  font-family: "Dongle", sans-serif;
+}
+
+.skill__used-title {
+  font-size: 3.5rem;
+  line-height: 5rem;
+  text-align: center;
+}
+
+.skill__used-text {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin: 1vh 2vw;
+  padding: 0 2vw;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.skill__used {
+  margin-top: 15vh;
+}
+
+/* 타이틀과 아래 내용 사이 간격 줌 */
+.skill__used-title {
+  margin-bottom: 2vh;
+}
+
+/* 이미지 사진들 미세 조정 */
+
+.skill__used-img {
+  border-radius: 50px;
+}
+
+.skill__used-img img {
+  width: 160px;
+  height: 190px;
+  padding: 5% 2%;
+  border-radius: 30%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.fa-caret-right {
+  margin-right: 8px;
+}
