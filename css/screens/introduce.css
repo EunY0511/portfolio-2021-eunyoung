@@ -1,4 +1,4 @@
-.main__intro {
+main {
   font-family: "Dongle", sans-serif;
   margin-top: 10vh;
 }
@@ -7,11 +7,6 @@
   display: flex;
   justify-content: center;
   margin: 5vh 2vw;
-}
-
-/* 웹사이즈 작아졌을 때, 글이 통째로 밑으로 내려가게 하기 위해 */
-.my__intro-box {
-  min-width: max-content;
 }
 
 .my__intro-title {
@@ -30,14 +25,11 @@
   text-align: center;
 }
 
-.my__intro-img img {
+.my__intro img {
   max-width: 450px;
 }
 
-.my__intro-img {
-  position: relative;
-}
-
+/* 테두리 번짐 효과 */
 .my__intro-img:after {
   position: absolute;
   display: block;
@@ -53,15 +45,15 @@
 
 @media screen and (max-width: 768px) {
   .my__intro {
-    display: flex;
     flex-direction: column;
   }
 
-  .my__intro-img img {
+  .my__intro img {
     max-width: 100%;
   }
 }
 
+/* 슬라이드에 버튼 */
 .prev-btn,
 .next-btn {
   border-radius: 4px;
@@ -104,7 +96,6 @@
   transition: 0.5s;
 }
 
-/* hover시 글씨 움직임 정도 */
 .prev-btn:hover span {
   padding-left: 25px;
 }
@@ -121,4 +112,43 @@
 .next-btn:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+/* mmmmmmmmmmmmmmmmmmmm */
+
+* {
+  box-sizing: border-box;
+}
+
+.slideshow-container {
+  position: relative;
+  background: var(--mint-color);
+  padding: 10px 10px;
+  margin-bottom: 20px;
+}
+
+.slide {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+.dot-container {
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: rgb(197, 197, 197);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: var(--mint-color);
 }
