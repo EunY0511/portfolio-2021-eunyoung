@@ -1,6 +1,6 @@
 .nav-bar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: fixed;
   top: 0;
@@ -12,6 +12,7 @@
 }
 
 .nav__title {
+  display: none;
   font-size: 3rem;
   color: var(--font-color);
 }
@@ -22,7 +23,7 @@
 
 .nav__btn {
   display: inline-block;
-  width: 15vw;
+  width: 14vw;
   height: 50px;
   background: transparent;
   border: 3px solid var(--font-color);
@@ -96,7 +97,12 @@
   .nav-bar {
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 46px;
+    padding-top: 47px;
+  }
+
+  .nav__title {
+    display: flex;
+    margin-top: 10px;
   }
 
   .nav__menu {
@@ -117,6 +123,7 @@
     justify-content: flex-end;
     width: 100%;
     padding-left: 0;
+    margin-left: 0;
   }
 
   .nav-bar__toggleBtn {

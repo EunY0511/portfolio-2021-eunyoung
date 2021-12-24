@@ -1,5 +1,7 @@
 main {
   font-family: "Dongle", sans-serif;
+  padding-top: 18vh;
+  padding-bottom: 17vh;
 }
 
 .skill__used-title {
@@ -17,17 +19,12 @@ main {
   text-align: center;
 }
 
-.skill__used {
-  margin-top: 15vh;
-}
-
 /* 타이틀과 아래 내용 사이 간격 줌 */
 .skill__used-title {
   margin-bottom: 2vh;
 }
 
 /* 이미지 사진들 미세 조정 */
-
 .skill__used-img {
   border-radius: 50px;
 }

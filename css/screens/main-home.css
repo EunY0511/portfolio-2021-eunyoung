@@ -1,7 +1,7 @@
 main {
   color: var(--font-color);
-  padding-top: 25vh;
-  padding-bottom: 21vh;
+  padding-top: 18vh;
+  padding-bottom: 17vh;
   text-align: center;
 }
 
@@ -16,7 +16,8 @@ main {
 .main__animation svg {
   display: inline-block;
   margin: 0 -0.01em;
-  animation: loading 6s infinite alternate;
+  /* alternate 애니메이션이 끝나고 다시 자연스럽게 시작하는것 */
+  animation: loading 5s infinite alternate;
 }
 
 .main__animation svg:first-child {
@@ -73,10 +74,10 @@ main {
   }
   80% {
     opacity: 0.85;
-    transform: translateY(-15px);
   }
   100% {
     opacity: 1;
+    transform: translateY(-15px);
   }
 }
 
