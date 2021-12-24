@@ -1,22 +1,22 @@
-main {
+.intro {
   font-family: "Dongle", sans-serif;
   margin-top: 10vh;
 }
 
-.my__intro {
+.intro-me {
   display: flex;
   justify-content: center;
   margin: 5vh 2vw;
 }
 
-.my__intro-title {
+.intro-me__title {
   font-size: 3.5rem;
   line-height: 5rem;
   text-align: center;
   padding-right: 25%;
 }
 
-.my__intro-contents {
+.intro-me__contents {
   font-size: 2rem;
   letter-spacing: 1px;
   margin: 1vh 2vw;
@@ -25,12 +25,12 @@ main {
   text-align: center;
 }
 
-.my__intro img {
+.intro-me__img > img {
   max-width: 450px;
 }
 
 /* 테두리 번짐 효과 */
-.my__intro-img:after {
+.intro-me__img:after {
   position: absolute;
   display: block;
   content: "";
@@ -44,18 +44,18 @@ main {
 }
 
 @media screen and (max-width: 768px) {
-  .my__intro {
+  .intro-me {
     flex-direction: column;
   }
 
-  .my__intro img {
+  .intro-me__img img {
     max-width: 100%;
   }
 }
 
 /* 슬라이드에 버튼 */
-.prev-btn,
-.next-btn {
+.intro__prev-btn,
+.intro__next-btn {
   border-radius: 4px;
   background-color: var(--back-color);
   border: none;
@@ -69,8 +69,8 @@ main {
   margin: 5px 5vw;
 }
 
-.prev-btn span,
-.next-btn span {
+.intro__prev-btn span,
+.intro__next-btn span {
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -78,7 +78,7 @@ main {
 }
 
 /* :after 가상 요소, content 필수 */
-.prev-btn span:after {
+.intro__prev-btn span:after {
   content: "\00ab";
   position: absolute;
   opacity: 0;
@@ -87,7 +87,7 @@ main {
   transition: 0.5s;
 }
 
-.next-btn span:after {
+.intro__next-btn span:after {
   content: "\00bb";
   position: absolute;
   opacity: 0;
@@ -96,27 +96,27 @@ main {
   transition: 0.5s;
 }
 
-.prev-btn:hover span {
+.intro__prev-btn:hover span {
   padding-left: 25px;
 }
 
-.next-btn:hover span {
+.intro__next-btn:hover span {
   padding-right: 25px;
 }
 
-.prev-btn:hover span:after {
+.intro__prev-btn:hover span:after {
   opacity: 1;
   left: 0;
 }
 
-.next-btn:hover span:after {
+.intro__next-btn:hover span:after {
   opacity: 1;
   right: 0;
 }
 
 /* mmmmmmmmmmmmmmmmmmmm */
 
-/* .slideshow-container {
+/* .intro-slideshow__container {
   background: var(--mint-color);
   padding: 10px 10px;
   margin-bottom: 20px;
@@ -128,11 +128,11 @@ main {
   text-align: center;
 }
 
-.dot-container {
+.intro-dot__container {
   text-align: center;
 }
 
-.dot {
+.intro-dot {
   cursor: pointer;
   height: 12px;
   width: 12px;
@@ -144,6 +144,6 @@ main {
 }
 
 .move,
-.dot:hover {
+.intro-dot:hover {
   background-color: var(--mint-color);
 } */

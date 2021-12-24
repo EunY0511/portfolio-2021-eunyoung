@@ -1,55 +1,54 @@
-main {
+.home {
   color: var(--font-color);
   padding-top: 18vh;
-  padding-bottom: 17vh;
   text-align: center;
 }
 
-.main__animation {
+.home-animation {
   display: flex;
-  margin: 0 auto;
+  margin: 12vh auto;
   justify-content: center;
   width: 20rem;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
-.main__animation svg {
+.home-animation svg {
   display: inline-block;
   margin: 0 -0.01em;
   /* alternate 애니메이션이 끝나고 다시 자연스럽게 시작하는것 */
   animation: loading 5s infinite alternate;
 }
 
-.main__animation svg:first-child {
+.home-animation svg:first-child {
   opacity: 0.1;
   animation-delay: 1s;
 }
 
-.main__animation svg:nth-child(2) {
+.home-animation svg:nth-child(2) {
   opacity: 0.3;
   width: 120%;
   animation-delay: 1.5s;
 }
 
-.main__animation svg:nth-child(3) {
+.home-animation svg:nth-child(3) {
   opacity: 0.5;
   width: 140%;
   animation-delay: 2s;
 }
 
-.main__animation svg:nth-child(4) {
+.home-animation svg:nth-child(4) {
   opacity: 0.7;
   width: 160%;
   animation-delay: 2.5s;
 }
 
-.main__animation svg:nth-child(5) {
+.home-animation svg:nth-child(5) {
   opacity: 0.9;
   width: 180%;
   animation-delay: 3s;
 }
 
-.main__animation svg:last-child {
+.home-animation svg:last-child {
   opacity: 1;
   width: 200%;
   animation-delay: 3.5s;
@@ -81,19 +80,23 @@ main {
   }
 }
 
-.main__box {
+.home-box {
   font-family: "Dongle", sans-serif;
   font-size: 2rem;
   letter-spacing: 1px;
   margin: 0 2vw;
 }
 
-.main__contents {
+.home-box__title {
+  margin: 2vh 7vw;
+}
+
+.home-box__contents {
   list-style: circle;
   font-size: 1.8rem;
   letter-spacing: 1px;
   display: inline-block;
-  margin: 3vh 2vw;
+  margin: 0 2vw;
   padding: 2vh 40px;
   text-align: start;
   line-height: 38px;
@@ -105,7 +108,8 @@ footer {
   justify-content: center;
   color: var(--font-color);
   font-size: 1.2rem;
-  padding: 0 2vw;
+  margin-top: 20vh;
+  padding-bottom: 2vh;
 }
 
 .footer-list {

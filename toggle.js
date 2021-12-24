@@ -1,6 +1,6 @@
 const toggleBtn = document.querySelector(".nav-bar__toggleBtn");
-const menu = document.querySelector(".nav__menu");
-const icons = document.querySelector(".nav__icon");
+const menu = document.querySelector(".nav-bar__menu");
+const icons = document.querySelector(".nav-bar__icon");
 
 
 // 클릭 할 때마다 지정한 함수를 호출하기 (API)

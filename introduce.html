@@ -10,26 +10,26 @@
   </head>
   <body>
     <header class="nav-bar">
-      <div class="nav__title">
-        <a href="index.html">EunY</a>
+      <div class="nav-bar__title">
+        <a href="index.html">EunYoung</a>
       </div>
 
-      <ul class="nav__menu">
-        <li class="nav__btn">
-          <a class="nav__link" href="index.html">Home</a>
+      <ul class="nav-bar__menu">
+        <li class="nav-bar__btn">
+          <a class="nav-bar__link" href="index.html">Home</a>
         </li>
-        <li class="nav__btn">
-          <a class="nav__link" href="introduce.html">Introduce</a>
+        <li class="nav-bar__btn">
+          <a class="nav-bar__link" href="intro.html">Intro</a>
         </li>
-        <li class="nav__btn">
-          <a class="nav__link" href="project.html">My Project</a>
+        <li class="nav-bar__btn">
+          <a class="nav-bar__link" href="project.html">My Project</a>
         </li>
-        <li class="nav__btn">
-          <a class="nav__link" href="#">Guest Book</a>
+        <li class="nav-bar__btn">
+          <a class="nav-bar__link" href="#">Guest Book</a>
         </li>
       </ul>
 
-      <div class="nav__icon">
+      <div class="nav-bar__icon">
         <a href="https://github.com/EunY0511" target="_blank">
           <i class="fab fa-github"></i>
         </a>
@@ -38,20 +38,20 @@
       <a href="#" class="nav-bar__toggleBtn"><i class="fas fa-bars"></i></a>
     </header>
 
-    <main>
-      <!-- <div class="dot-container">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
+    <main class="intro">
+      <!-- <div class="intro-dot__container">
+        <span class="intro-dot" onclick="currentSlide(1)"></span>
+        <span class="intro-dot" onclick="currentSlide(2)"></span>
+        <span class="intro-dot" onclick="currentSlide(3)"></span>
       </div>
 
-      <div class="slideshow-container">
-        <div class="slide my__intro">
-          <div class="my__intro-img">
-            <img src="image/introduce-turtle.jpg" alt="" />
+      <div class="intro-slideshow__container">
+        <div class="intro-me slide">
+          <div class="intro-me__img">
+            <img src="image/intro-turtle.jpg" alt="" />
           </div>
-          <h3 class="my__intro-title">I am</h3>
-          <p class="my__intro-contents">
+          <h3 class="intro-me__title">I am</h3>
+          <p class="intro-me__contents">
             거북이를 떠올리면 '느리다'는 이미지가 생각납니다.</br>
             하지만 바다거북이는 바다 속에서 헤엄칠 때, </br>
             굉장히 빠른 속도를 자랑합니다.</br>
@@ -61,12 +61,12 @@
           </p>
         </div>
 
-        <div class="slide my__intro">
-          <div class="my__intro-img">
+        <div class="intro-me slide">
+          <div class="intro-me__img">
             <img src="image/고구귀.jpg" alt="" />
           </div>
-          <h3 class="my__intro-title">I am</h3>
-          <p class="my__intro-contents">
+          <h3 class="intro-me__title">I am</h3>
+          <p class="intro-me__contents">
             변화와 꾸준한 공부가 필요한 개발이라는 분야에 걸맞게</br>
             요즘 저는 새로운 분야에 입문하여 </br>
             도전과 배움을 즐기고 있습니다.</br>
@@ -77,12 +77,12 @@
           </p>
         </div>
 
-        <div class="slide my__intro">
-          <div class="my__intro-img">
+        <div class="intro-me slide">
+          <div class="intro-me__img">
             <img src="image/그구기.jpg" alt="" />
           </div>
-          <h3 class="my__intro-title">I am</h3>
-          <p class="my__intro-contents">
+          <h3 class="intro-me__title">I am</h3>
+          <p class="intro-me__contents">
             저는 문제를 마주하면 코드를 되짚어보거나 </br>
             구글링 및 유튜브를 서칭하면서 해결해 나가고 있습니다.</br>
             또한 코드를 이렇게도 써보고, 저렇게도 바꿔보며</br>
@@ -94,17 +94,19 @@
         </div>
       </div>
 
-      <a class="prev-btn" onclick="plusSlides(-1)"><span>PREVIOUS</span></a>
-      <a class="next-btn" onclick="plusSlides(1)"><span>NEXT</span></a>   -->
+      <a class="intro__prev-btn" onclick="plusSlides(-1)"><span>PREVIOUS</span></a>
+      <a class="intro__next-btn" onclick="plusSlides(1)"><span>NEXT</span></a>   -->
 
-      <!-- <main class="main__intro">
-      <div class="my__intro">
-        <div class="my__intro-img">
-          <img src="image/introduce-turtle.jpg" alt="" />
+      <!-- 여기부터 기존 -->
+
+      <!-- <main class="intro__container">
+      <div class="intro-me">
+        <div class="intro-me__img">
+          <img src="image/intro-turtle.jpg" alt="" />
         </div>
-        <div class="my__intro-box">
-          <h3 class="my__intro-title">I am</h3>
-          <p class="my__intro-contents">
+        <div class="intro-me__box">
+          <h3 class="intro-me__title">I am</h3>
+          <p class="intro-me__contents">
             거북이를 떠올리면 '느리다'는 이미지가 생각납니다.</br>
             하지만 바다거북이는 바다 속에서 헤엄칠 때, </br>
             굉장히 빠른 속도를 자랑합니다.</br>
@@ -115,13 +117,13 @@
         </div>
       </div>    
       
-      <div class="my__intro">
-        <div class="my__intro-img">
-          <img src="image/introduce-turtle.jpg" alt="" />
+      <div class="intro-me">
+        <div class="intro-me__img">
+          <img src="image/intro-turtle.jpg" alt="" />
         </div>
-        <div class="my__intro-box">
-          <h3 class="my__intro-title">I am</h3>
-          <p class="my__intro-contents">
+        <div class="intro-me__box">
+          <h3 class="intro-me__title">I am</h3>
+          <p class="intro-me__contents">
             변화와 꾸준한 공부가 필요한 개발이라는 분야에 걸맞게</br>
             요즘 저는 새로운 분야에 입문하여 </br>
             도전과 배움을 즐기고 있습니다.</br>
@@ -133,13 +135,13 @@
         </div>
       </div>
 
-      <div class="my__intro">
-        <div class="my__intro-img">
-          <img src="image/introduce-turtle.jpg" alt="" />
+      <div class="intro-me">
+        <div class="intro-me__img">
+          <img src="image/intro-turtle.jpg" alt="" />
         </div>
-        <div class="my__intro-box">
-          <h3 class="my__intro-title">I am</h3>
-          <p class="my__intro-contents">
+        <div class="intro-me__box">
+          <h3 class="intro-me__title">I am</h3>
+          <p class="intro-me__contents">
             저는 문제를 마주하면 코드를 되짚어보거나 </br>
             구글링 및 유튜브를 서칭하면서 해결해 나가고 있습니다.</br>
             또한 코드를 이렇게도 써보고, 저렇게도 바꿔보며</br>
@@ -151,10 +153,8 @@
         </div> 
       </div> -->
 
-      <!-- <div class="intro-a">
-        <a class="prev-btn"><span>PREVIOUS</span></a>
-        <a class="next-btn"><span>NEXT</span></a>
-      </div> -->
+      <!-- <a class="intro__prev-btn"><span>PREVIOUS</span></a>
+        <a class="intro__next-btn"><span>NEXT</span></a> -->
     </main>
 
     <script src="toggle.js" defer></script>

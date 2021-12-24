@@ -1,16 +1,22 @@
 main {
   font-family: "Dongle", sans-serif;
+  color: var(--font-color);
   padding-top: 18vh;
-  padding-bottom: 17vh;
 }
 
-.skill__used-title {
+.skill-used__container {
+  margin: 6vh 0;
+}
+
+.skill-used__title,
+.project__title {
   font-size: 3.5rem;
   line-height: 5rem;
   text-align: center;
+  margin: 2vh 0;
 }
 
-.skill__used-text {
+.skill-used__text {
   font-size: 2rem;
   letter-spacing: 1px;
   margin: 1vh 2vw;
@@ -19,19 +25,15 @@ main {
   text-align: center;
 }
 
-/* 타이틀과 아래 내용 사이 간격 줌 */
-.skill__used-title {
-  margin-bottom: 2vh;
-}
-
 /* 이미지 사진들 미세 조정 */
-.skill__used-img {
+.skill-used__img {
   border-radius: 50px;
+  text-align: center;
 }
 
-.skill__used-img img {
-  width: 160px;
-  height: 190px;
+.skill-used__img img {
+  width: 140px;
+  height: 170px;
   padding: 5% 2%;
   border-radius: 30%;
   overflow: hidden;
@@ -40,4 +42,32 @@ main {
 
 .fa-caret-right {
   margin-right: 8px;
+}
+
+/* 여기서부터는 프로젝트 관련 css */
+
+.project__container {
+  background-color: var(--font-color);
+  padding-top: 8vh;
+}
+
+.project__title {
+  color: var(--choco-color);
+  font-size: 3.8rem;
+  text-align: center;
+}
+
+.kakao-project,
+.toDoList-project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh 2vw;
+}
+
+.kakao-project__img img,
+.toDoList-project__img img {
+  width: 25vw;
+  height: 67vh;
+  object-fit: cover;
 }

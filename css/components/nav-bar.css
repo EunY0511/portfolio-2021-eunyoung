@@ -11,17 +11,17 @@
   background-color: var(--back-color);
 }
 
-.nav__title {
+.nav-bar__title {
   display: none;
   font-size: 3rem;
   color: var(--font-color);
 }
 
-.nav__menu {
+.nav-bar__menu {
   display: flex;
 }
 
-.nav__btn {
+.nav-bar__btn {
   display: inline-block;
   width: 14vw;
   height: 50px;
@@ -39,7 +39,7 @@
 }
 
 /* 애니메이션을 위해 추가 태그 없이 가상선택자 사용 */
-.nav__btn:after {
+.nav-bar__btn:after {
   content: "";
   display: block;
   position: absolute;
@@ -55,15 +55,15 @@
   transition: all 0.5s ease;
 }
 
-.nav__btn:hover {
+.nav-bar__btn:hover {
   color: var(--back-color);
 }
 
-.nav__btn:hover:after {
+.nav-bar__btn:hover:after {
   transform: scale(1, 1);
 }
 
-.nav__link {
+.nav-bar__link {
   width: 100%;
   display: block;
   text-align: center;
@@ -73,13 +73,13 @@
   z-index: 1;
 }
 
-.nav__icon {
+.nav-bar__icon {
   color: var(--font-color);
   display: flex;
   font-size: 2.5rem;
 }
 
-.nav__icon a {
+.nav-bar__icon a {
   padding: 8px 15px;
 }
 
@@ -100,12 +100,13 @@
     padding-top: 47px;
   }
 
-  .nav__title {
+  .nav-bar__title {
     display: flex;
     margin-top: 10px;
+    margin-left: 2vw;
   }
 
-  .nav__menu {
+  .nav-bar__menu {
     display: none;
     /* 햄버거 눌렀을 때만 보이게 하기 위해 */
     flex-direction: column;
@@ -114,11 +115,11 @@
     width: 100%;
   }
 
-  .nav__btn {
+  .nav-bar__btn {
     width: 40%;
   }
 
-  .nav__icon {
+  .nav-bar__icon {
     display: none;
     justify-content: flex-end;
     width: 100%;
@@ -130,8 +131,8 @@
     display: block;
   }
 
-  .nav__menu.active,
-  .nav__icon.active {
+  .nav-bar__menu.active,
+  .nav-bar__icon.active {
     display: flex;
   }
 }
