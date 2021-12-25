@@ -2,6 +2,7 @@ main {
   font-family: "Dongle", sans-serif;
   color: var(--font-color);
   padding-top: 18vh;
+  width: 100%;
 }
 
 .skill-used__container {
@@ -44,30 +45,146 @@ main {
   margin-right: 8px;
 }
 
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 /* 여기서부터는 프로젝트 관련 css */
 
 .project__container {
   background-color: var(--font-color);
-  padding-top: 8vh;
+  color: var(--back-color);
 }
 
 .project__title {
-  color: var(--choco-color);
   font-size: 3.8rem;
   text-align: center;
 }
 
 .kakao-project,
 .toDoList-project {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1vh 2vw;
+  font-size: 3rem;
+  margin: 5vh 10vw;
+  /* 드롭다운 위치 조정때문에  */
+  position: relative;
 }
 
-.kakao-project__img img,
-.toDoList-project__img img {
-  width: 25vw;
-  height: 67vh;
+.toDoList-project {
+  padding: 10vh 0;
+}
+
+.kakao__title,
+.toDoList__title {
+  margin-bottom: 2vh;
+}
+
+.kakao__explanation {
+  margin-left: 50px;
+}
+
+.kakao-project__row,
+.toDoList-project__row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.kakao-project__slider li img,
+.toDoList-project__slider li img {
+  width: 100%;
+  height: auto;
   object-fit: cover;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .kakao-project__row,
+  .toDoList-project__row {
+    flex-direction: column;
+  }
+}
+
+/* prev, next 버튼 위치 조정하기 위한 부모 지정*/
+.kakao-project__controls {
+  position: relative;
+}
+
+/* 이미지 hover시 버튼 보이게 하려고 */
+.kakao-project__controls .bx-prev,
+.kakao-project__controls .bx-next {
+  visibility: hidden;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  color: var(--font-color);
+}
+
+.kakao-project__controls .bx-prev {
+  right: calc(90%);
+}
+
+.kakao-project__controls .bx-next {
+  left: calc(90%);
+}
+
+.kakao-project__controls .bx-pager {
+  position: absolute;
+  left: 40%;
+  transform: translateX(50%);
+  font-size: 1.5rem;
+}
+
+.kakao-project__controls:hover {
+  opacity: 0.5;
+}
+
+/* 사진 hover시 bx-prev, bx-next버튼이 나타나게끔 작동하려면
+ kakao-project__controls의 자손이어야 함.
+ 즉 부모 hover시 bx-btn이 작동하므로, 
+ kakao-project__slider에 hover하면 부모에 해당 안되므로 
+ 아무 일도 일어나지 않음. */
+.kakao-project__controls:hover .bx-prev,
+.kakao-project__controls:hover .bx-next {
+  visibility: visible;
+}
+
+.kakao__contents {
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+/* 여기부터 드롭다운 내용 펼치기  */
+
+.btn01,
+.btn02 {
+  padding: 5px 5px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4em;
+  border: none;
+  border-radius: 10px;
+  /* 위치 조정 */
+  position: absolute;
+  top: -10%;
+  transform: translateY(50%);
+}
+
+.btn01 {
+  background-color: var(--back-color);
+  color: var(--font-color);
+}
+
+.btn02 {
+  background-color: var(--back-color);
+  color: #fff;
+}
+
+.example01 {
+  padding: 5px;
+  text-align: center;
+  border: 1px solid var(--back-color);
+  /* 위치 조정 */
+  position: absolute;
+  left: 0;
+  top: 23%;
+  width: 100%;
+  transform: translateY(-70%);
+  background-color: var(--font-color);
+  z-index: 2;
 }

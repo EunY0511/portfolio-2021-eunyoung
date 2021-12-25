@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bxSlider, jQuery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <!-- jQuery 드롭다운 구현 -->
+    <!-- <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script> -->
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="" />
     <title>Eun Young's portfolio</title>
@@ -59,31 +66,67 @@
 
       <div class="project__container">
         <h2 class="project__title">Project</h2>
+
         <div class="kakao-project">
-          <div class="kakao-project__img">
-            <img src="image/kakaoTalk-main.PNG" alt="">    
-            <img src="image/kakaoTalk-chatting.PNG" alt="">   
+          <div class="kakao-project__row">
+            <div class="kakao-project__controls">
+              <ul class="kakao-project__slider">
+                <li><img src="image/kakaoTalk-1.png" alt=""></li>
+                <li><img src="image/kakaoTalk-2.png" alt=""></li>
+                <li><img src="image/kakaoTalk-3.png" alt=""></li>
+                <li><img src="image/kakaoTalk-4.png" alt=""></li>
+                <li><img src="image/kakaoTalk-5.png" alt=""></li>
+              </ul>
+            </div>  
+            <div class="kakao__explanation">
+              <h3 class="kakao__title">Kakao Talk Clone</h3>
+              <span class="kakao__contents">
+                카카오톡 스크린을 만들어 보았... </br>
+                사용한건 media screen... </br>
+                채팅창 및 여러 곳에 작은 애니메이션을 깃들였소.</br>
+                너무 허접해서 뭔가를 더 해야 ...
+              </span>
+              <div class="kakao__url"><a href="#">코드 보기</a></div>
+              <div class="kakao__url"><a href="#">사이트 보기</a></div>
+            </div>
           </div>
-          <div class="kakao-explanation">
-            <h2 class="kakao-explanation__title"></h2>
-            <span class="kakao-explanation__contents"></span>
-          </div>
+          <!-- 여기부터 -->
+          <button id="spreadBtn02" class="btn01">code</button> 
+          <ul id="hiddenList01" class="example01" style="display: none;"> 
+            <li>여기다가</li> 
+            <li>뭘</li> 
+            <li>쓸까용</li> 
+            <li>홍홍홍홍</li> 
+          </ul>
+          <!-- 여기까지 -->
         </div>
 
         <div class="toDoList-project">
-          <div class="toDoList-project__img">
-            <img src="image/todolist-1.PNG" alt="">    
-            <img src="image/todolist-2.PNG" alt="">    
-          </div>
-          <div class="toDoList-explanation">
-            <h2 class="toDoList-explanation__title"></h2>
-            <span class="toDoList-explanation__contents"></span>
-          </div>
+          <div class="toDoList-project__row">
+            <div class="toDoList-project__controls">
+              <ul class="toDoList-project__slider">
+                <li><img src="image/toDoList-1.png" alt=""></li>
+                <li><img src="image/todolist-2.png" alt=""></li>
+                <li><img src="image/todolist-3.png" alt=""></li>
+              </ul>
+            </div>  
+            <div class="toDoList__explanation">
+              <h3 class="toDoList__title">To do list</h3>
+              <span class="toDoList__contents">
+                으아 .... 설명할게 없어 .........</br>
+                뭐라고 좀 해봐바 뇌야 </br>
+                일을 좀 해 </br>
+              </span>
+              <div class="toDOList__url"><a href="#">코드 보기</a></div>
+              <div class="toDOList__url"><a href="#">사이트 보기</a></div>
+            </div>
+          </div>  
         </div>
       </div>
     </main>
 
     <script src="toggle.js" defer></script>
+    <script src="slider.js"></script>
     <script
       src="https://kit.fontawesome.com/6478f529f2.js"
       crossorigin="anonymous"

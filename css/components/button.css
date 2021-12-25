@@ -1,0 +1,66 @@
+.project__prev-btn,
+.project__next-btn {
+  border-radius: 4px;
+  background-color: var(--font-color);
+  color: var(--choco-color);
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  width: 150px;
+  cursor: pointer;
+}
+
+.project__prev-btn {
+  position: absolute;
+  left: 10px;
+}
+
+.project__next-btn {
+  position: absolute;
+  left: 170px;
+}
+
+.project__prev-btn span,
+.project__next-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+/* :after 가상 요소, content 필수 */
+.project__prev-btn span:after {
+  content: "\00ab";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+
+.project__next-btn span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.project__prev-btn:hover span {
+  padding-left: 25px;
+}
+
+.project__next-btn:hover span {
+  padding-right: 25px;
+}
+
+.project__prev-btn:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
+.project__next-btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}

@@ -1,7 +1,9 @@
 :root {
-  --back-color: #16363f;
-  --font-color: #f5f7c8;
+  --back-color: #fafced;
+  --font-color: #16363f;
   --milkChoco-color: rgb(160, 82, 80);
   --choco-color: rgb(96, 11, 30);
   --mint-color: rgb(89, 151, 162);
 }
+
+/* #f5f7c8; */
