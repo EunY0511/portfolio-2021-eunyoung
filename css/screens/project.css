@@ -45,7 +45,7 @@ main {
   margin-right: 8px;
 }
 
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 /* 여기서부터는 프로젝트 관련 css */
 
 .project__container {
@@ -61,22 +61,28 @@ main {
 .kakao-project,
 .toDoList-project {
   font-size: 3rem;
-  margin: 5vh 10vw;
-  /* 드롭다운 위치 조정때문에  */
-  position: relative;
+  margin: 10vh 10vw;
 }
 
 .toDoList-project {
   padding: 10vh 0;
+  margin-top: 20vh;
 }
 
 .kakao__title,
 .toDoList__title {
   margin-bottom: 2vh;
+  /* 드롭다운 위치 조정때문에  */
+  position: relative;
+  border-bottom: 1px solid var(--back-color);
 }
 
 .kakao__explanation {
   margin-left: 50px;
+}
+
+.toDoList__explanation {
+  margin-right: 50px;
 }
 
 .kakao-project__row,
@@ -93,98 +99,120 @@ main {
   overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
-  .kakao-project__row,
-  .toDoList-project__row {
-    flex-direction: column;
-  }
-}
-
 /* prev, next 버튼 위치 조정하기 위한 부모 지정*/
-.kakao-project__controls {
+.kakao-project__controls,
+.toDoList-project__controls {
   position: relative;
 }
 
 /* 이미지 hover시 버튼 보이게 하려고 */
 .kakao-project__controls .bx-prev,
-.kakao-project__controls .bx-next {
+.kakao-project__controls .bx-next,
+.toDoList-project__controls .bx-prev,
+.toDoList-project__controls .bx-next {
   visibility: hidden;
   position: absolute;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
   color: var(--font-color);
 }
 
-.kakao-project__controls .bx-prev {
-  right: calc(90%);
+/* 사진 크기가 달라서 버튼 위치 따로 조정 */
+.toDoList-project__controls .bx-prev,
+.toDoList-project__controls .bx-next {
+  top: 45%;
 }
 
+.kakao-project__controls .bx-prev,
+.toDoList-project__controls .bx-prev {
+  left: 10px;
+}
+
+/* 반응형으로 화면 줄어들 때, 버튼이 이미지 위에
+   그대로 고정되게 하려고 left 기준으로 잡아줌. */
 .kakao-project__controls .bx-next {
-  left: calc(90%);
+  left: 362px;
 }
 
-.kakao-project__controls .bx-pager {
+.toDoList-project__controls .bx-next {
+  left: 455px;
+}
+
+/* 사진 밑에 page 보이는 부분 조정 */
+.kakao-project__controls .bx-pager,
+.toDoList-project__controls .bx-pager {
   position: absolute;
-  left: 40%;
+  left: 165px;
   transform: translateX(50%);
   font-size: 1.5rem;
 }
 
-.kakao-project__controls:hover {
+.toDoList-project__controls .bx-pager {
+  left: 215px;
+}
+
+.kakao-project__controls:hover,
+.toDoList-project__controls:hover {
   opacity: 0.5;
 }
 
 /* 사진 hover시 bx-prev, bx-next버튼이 나타나게끔 작동하려면
  kakao-project__controls의 자손이어야 함.
- 즉 부모 hover시 bx-btn이 작동하므로, 
+
  kakao-project__slider에 hover하면 부모에 해당 안되므로 
  아무 일도 일어나지 않음. */
 .kakao-project__controls:hover .bx-prev,
-.kakao-project__controls:hover .bx-next {
+.kakao-project__controls:hover .bx-next,
+.toDoList-project__controls:hover .bx-prev,
+.toDoList-project__controls:hover .bx-next {
   visibility: visible;
 }
 
-.kakao__contents {
+.kakao__contents,
+.toDoList__contents {
   display: inline-block;
   margin-bottom: 50px;
 }
 
-/* 여기부터 드롭다운 내용 펼치기  */
-
-.btn01,
-.btn02 {
-  padding: 5px 5px;
+/* 여기부터 드롭다운  */
+.kakao__expandBtn,
+.toDoList__expandBtn {
   text-align: center;
   font-weight: 600;
-  line-height: 1.4em;
   border: none;
-  border-radius: 10px;
+  background-color: var(--font-color);
+  color: var(--back-color);
   /* 위치 조정 */
   position: absolute;
-  top: -10%;
+  top: 10px;
   transform: translateY(50%);
+  right: -4px;
 }
 
-.btn01 {
-  background-color: var(--back-color);
-  color: var(--font-color);
-}
-
-.btn02 {
-  background-color: var(--back-color);
-  color: #fff;
-}
-
-.example01 {
+.kakao__expanded-contents,
+.toDoList__expanded-contents {
+  display: none;
   padding: 5px;
-  text-align: center;
   border: 1px solid var(--back-color);
   /* 위치 조정 */
   position: absolute;
-  left: 0;
-  top: 23%;
+  top: 48px;
   width: 100%;
-  transform: translateY(-70%);
   background-color: var(--font-color);
-  z-index: 2;
+  z-index: 1;
+}
+
+@media screen and (max-width: 950px) {
+  .kakao-project__row,
+  .toDoList-project__row {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .kakao__explanation,
+  .toDoList-project__controls {
+    /* 스크린 작아졌을 때 양 옆에 너비 맞추기 위해 */
+    margin: 0;
+    margin-top: 100px;
+  }
 }

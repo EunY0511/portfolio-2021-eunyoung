@@ -16,7 +16,7 @@
   display: inline-block;
   margin: 0 -0.01em;
   /* alternate 애니메이션이 끝나고 다시 자연스럽게 시작하는것 */
-  animation: loading 5s infinite alternate;
+  animation: loading 7s infinite alternate;
 }
 
 .home-animation svg:first-child {
@@ -27,54 +27,40 @@
 .home-animation svg:nth-child(2) {
   opacity: 0.3;
   width: 120%;
-  animation-delay: 1.5s;
+  animation-delay: 2s;
 }
 
 .home-animation svg:nth-child(3) {
   opacity: 0.5;
   width: 140%;
-  animation-delay: 2s;
+  animation-delay: 3s;
 }
 
 .home-animation svg:nth-child(4) {
   opacity: 0.7;
   width: 160%;
-  animation-delay: 2.5s;
+  animation-delay: 4s;
 }
 
 .home-animation svg:nth-child(5) {
   opacity: 0.9;
   width: 180%;
-  animation-delay: 3s;
+  animation-delay: 5s;
 }
 
 .home-animation svg:last-child {
   opacity: 1;
   width: 200%;
-  animation-delay: 3.5s;
+  animation-delay: 6s;
 }
 
 @keyframes loading {
-  0% {
+  0%,
+  100% {
     opacity: 0.1;
     transform: translateY(0);
   }
-  20% {
-    opacity: 0.3;
-    transform: translateY(-15px);
-  }
-  40% {
-    opacity: 0.5;
-    transform: translateY(-15px);
-  }
-  60% {
-    opacity: 0.7;
-    transform: translateY(0);
-  }
-  80% {
-    opacity: 0.85;
-  }
-  100% {
+  50% {
     opacity: 1;
     transform: translateY(-15px);
   }

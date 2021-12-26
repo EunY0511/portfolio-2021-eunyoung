@@ -11,10 +11,14 @@
   background-color: var(--back-color);
 }
 
-.nav-bar__title {
+.nav-bar__logo {
   display: none;
-  font-size: 3rem;
   color: var(--font-color);
+}
+
+.nav-bar__logo img {
+  width: 150px;
+  height: auto;
 }
 
 .nav-bar__menu {
@@ -93,6 +97,7 @@
   font-size: 1.8rem;
 }
 
+/* ---------- 반응형 media 스크린 사용 ---------- */
 @media screen and (max-width: 768px) {
   .nav-bar {
     flex-direction: column;
@@ -100,9 +105,9 @@
     padding-top: 47px;
   }
 
-  .nav-bar__title {
+  .nav-bar__logo {
     display: flex;
-    margin-top: 10px;
+    margin-top: -25px;
     margin-left: 2vw;
   }
 
