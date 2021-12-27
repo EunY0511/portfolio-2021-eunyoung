@@ -156,9 +156,8 @@ main {
   opacity: 0.5;
 }
 
-/* 사진 hover시 bx-prev, bx-next버튼이 나타나게끔 작동하려면
+/* 사진 hover시 bx-prev, bx-next 버튼이 나타나게끔 작동하려면
  kakao-project__controls의 자손이어야 함.
-
  kakao-project__slider에 hover하면 부모에 해당 안되므로 
  아무 일도 일어나지 않음. */
 .kakao-project__controls:hover .bx-prev,
@@ -202,7 +201,7 @@ main {
   z-index: 1;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1000px) {
   .kakao-project__row,
   .toDoList-project__row {
     flex-direction: column;
