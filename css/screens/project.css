@@ -1,183 +1,43 @@
 main {
   font-family: "Dongle", sans-serif;
   color: var(--font-color);
-  padding-top: 18vh;
   width: 100%;
 }
-
-.skill-used__container {
-  margin: 6vh 0;
-}
-
-.skill-used__title,
-.project__title {
-  font-size: 3.5rem;
-  line-height: 5rem;
-  text-align: center;
-  margin: 2vh 0;
-}
-
-.skill-used__text {
-  font-size: 2rem;
-  letter-spacing: 1px;
-  margin: 1vh 2vw;
-  padding: 0 2vw;
-  line-height: 2rem;
-  text-align: center;
-}
-
-/* 이미지 사진들 미세 조정 */
-.skill-used__img {
-  border-radius: 50px;
-  text-align: center;
-}
-
-.skill-used__img img {
-  width: 140px;
-  height: 170px;
-  padding: 5% 2%;
-  border-radius: 30%;
-  overflow: hidden;
-  object-fit: cover;
-}
-
-.fa-caret-right {
-  margin-right: 8px;
-}
-
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
-/* 여기서부터는 프로젝트 관련 css */
 
 .project__container {
   background-color: var(--font-color);
   color: var(--back-color);
-}
-
-.project__title {
-  font-size: 3.8rem;
-  text-align: center;
-}
-
-.kakao-project,
-.toDoList-project {
+  padding: 25vh 5vw;
   font-size: 3rem;
-  margin: 10vh 10vw;
 }
 
-.toDoList-project {
-  padding: 10vh 0;
-  margin-top: 20vh;
-}
-
-.kakao__title,
-.toDoList__title {
-  margin-bottom: 2vh;
-  /* 드롭다운 위치 조정때문에  */
-  position: relative;
-  border-bottom: 1px solid var(--back-color);
-}
-
-.kakao__explanation {
-  margin-left: 50px;
-}
-
-.toDoList__explanation {
-  margin-right: 50px;
-}
-
-.kakao-project__row,
-.toDoList-project__row {
+.project__row {
   display: flex;
   justify-content: space-evenly;
 }
 
-.kakao-project__slider li img,
-.toDoList-project__slider li img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  overflow: hidden;
-}
-
-/* prev, next 버튼 위치 조정하기 위한 부모 지정*/
-.kakao-project__controls,
-.toDoList-project__controls {
-  position: relative;
-}
-
-/* 이미지 hover시 버튼 보이게 하려고 */
-.kakao-project__controls .bx-prev,
-.kakao-project__controls .bx-next,
-.toDoList-project__controls .bx-prev,
-.toDoList-project__controls .bx-next {
-  visibility: hidden;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--font-color);
-}
-
-/* 사진 크기가 달라서 버튼 위치 따로 조정 */
-.toDoList-project__controls .bx-prev,
-.toDoList-project__controls .bx-next {
-  top: 45%;
-}
-
-.kakao-project__controls .bx-prev,
-.toDoList-project__controls .bx-prev {
-  left: 10px;
-}
-
-/* 반응형으로 화면 줄어들 때, 버튼이 이미지 위에
-   그대로 고정되게 하려고 left 기준으로 잡아줌. */
-.kakao-project__controls .bx-next {
-  left: 362px;
-}
-
-.toDoList-project__controls .bx-next {
-  left: 455px;
-}
-
-/* 사진 밑에 page 보이는 부분 조정 */
-.kakao-project__controls .bx-pager,
-.toDoList-project__controls .bx-pager {
-  position: absolute;
-  left: 165px;
-  transform: translateX(50%);
-  font-size: 1.5rem;
-}
-
-.toDoList-project__controls .bx-pager {
-  left: 215px;
-}
-
-.kakao-project__controls:hover,
-.toDoList-project__controls:hover {
-  opacity: 0.5;
-}
-
-/* 사진 hover시 bx-prev, bx-next 버튼이 나타나게끔 작동하려면
- kakao-project__controls의 자손이어야 함.
- kakao-project__slider에 hover하면 부모에 해당 안되므로 
- 아무 일도 일어나지 않음. */
-.kakao-project__controls:hover .bx-prev,
-.kakao-project__controls:hover .bx-next,
-.toDoList-project__controls:hover .bx-prev,
-.toDoList-project__controls:hover .bx-next {
-  visibility: visible;
-}
-
-.kakao__contents,
-.toDoList__contents {
-  display: inline-block;
+.section_1 .project__explanation,
+.section_2 .project__slider-controls,
+.section_3 .project__explanation {
+  margin-right: 50px;
   margin-bottom: 50px;
 }
 
-/* 여기부터 드롭다운  */
-.kakao__expandBtn,
-.toDoList__expandBtn {
+.section_2 {
+  margin: 20vh 0;
+}
+
+.project__title {
+  margin-bottom: 2vh;
+  /* 드롭다운 위치 조정때문에 부모 지정.  */
+  position: relative;
+  border-bottom: 1px solid var(--back-color);
+}
+
+/* --------- 드롭다운 --------- */
+.project__expandBtn {
   text-align: center;
-  font-weight: 600;
+  font-size: 16px;
   border: none;
   background-color: var(--font-color);
   color: var(--back-color);
@@ -188,8 +48,7 @@ main {
   right: -4px;
 }
 
-.kakao__expanded-contents,
-.toDoList__expanded-contents {
+.project__expanded-contents {
   display: none;
   padding: 5px;
   border: 1px solid var(--back-color);
@@ -200,18 +59,71 @@ main {
   background-color: var(--font-color);
   z-index: 1;
 }
+/* ------------------------- */
+
+.project__contents {
+  margin-bottom: 50px;
+}
+
+.project__slider li img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* prev, next 버튼 위치 조정하기 위한 부모 지정*/
+.project__slider-controls {
+  position: relative;
+}
+
+/* 이미지 hover시 버튼 보이게 하려고 */
+.project__slider-controls .bx-prev,
+.project__slider-controls .bx-next {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--font-color);
+}
+
+.project__slider-controls .bx-prev {
+  left: 10px;
+}
+
+/* 반응형으로 화면 줄어들 때, 버튼이 이미지 위에
+   그대로 고정되게 하려고 left 기준으로 잡아줌. */
+.project__slider-controls .bx-next {
+  left: 362px;
+}
+
+/* 사진 밑에 page 보이는 부분 조정 */
+.project__slider-controls .bx-pager {
+  position: absolute;
+  left: 165px;
+  transform: translateX(50%);
+  font-size: 1.5rem;
+}
+
+.project__slider-controls:hover {
+  opacity: 0.5;
+}
+
+/* 사진 hover시 bx-prev, bx-next 버튼이 나타나게끔 작동하려면
+ project__slider-controls의 자손이어야 함.
+ project__slider에 hover하면 부모에 해당 안되므로 
+ 아무 일도 일어나지 않음. */
+.project__slider-controls:hover .bx-prev,
+.project__slider-controls:hover .bx-next {
+  visibility: visible;
+}
 
 @media screen and (max-width: 1000px) {
-  .kakao-project__row,
-  .toDoList-project__row {
+  .project__row {
     flex-direction: column;
-    padding: 0 20px;
   }
 
-  .kakao__explanation,
-  .toDoList-project__controls {
-    /* 스크린 작아졌을 때 양 옆에 너비 맞추기 위해 */
-    margin: 0;
-    margin-top: 100px;
+  .section_2 {
+    margin: 25vh 0;
   }
 }

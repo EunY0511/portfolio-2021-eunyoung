@@ -78,7 +78,6 @@
 }
 
 .home-box__contents {
-  list-style: circle;
   font-size: 1.8rem;
   letter-spacing: 1px;
   display: inline-block;
@@ -87,6 +86,10 @@
   text-align: start;
   line-height: 38px;
   border: 1px solid var(--font-color);
+}
+
+.home-box__contents svg {
+  vertical-align: middle;
 }
 
 footer {

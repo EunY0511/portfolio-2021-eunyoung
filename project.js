@@ -1,6 +1,6 @@
 // 외부 스크립트는 head에 받아와서 먼저 읽기 때문에, 문서가 준비되면 함수를 실행하라고 지정해줌.
 $(document).ready(function(){
-    $('.kakao-project__slider').bxSlider({
+    $('.project__slider').bxSlider({
         slideWidth:400,
         slideMargin:30,
         prevText:'<i class="fas fa-chevron-left"></i>',
@@ -8,40 +8,41 @@ $(document).ready(function(){
         pagerType:'short'
     });
 
-    $('.toDoList-project__slider').bxSlider({
-        slideWidth:500,
-        slideMargin:30,
-        prevText:'<i class="fas fa-chevron-left"></i>',
-        nextText:'<i class="fas fa-chevron-right"></i>',
-        pagerType:'short'
-    })
-
     // 프로젝트 드롭다운
-    $(".kakao__expandBtn").click(function(){
-        if ($("#kakao__expanded__hidden").is(":visible")){
-            $("#kakao__expanded__hidden").slideUp(); 
+    $("#portFolioBtn").click(function(){
+        if ($("#portFolio__expanded-hidden").is(":visible")){
+            $("#portFolio__expanded-hidden").slideUp(); 
         } else {
-            $("#kakao__expanded__hidden").slideDown(); 
+            $("#portFolio__expanded-hidden").slideDown(); 
         } });
 
-    $(".toDoList__expandBtn").click(function(){
-        if ($("#toDoList__expanded__hidden").is(":visible")){
-            $("#toDoList__expanded__hidden").slideUp(); 
+    $("#kakaoTalkBtn").click(function(){
+        if ($("#kakaoTalk__expanded-hidden").is(":visible")){
+            $("#kakaoTalk__expanded-hidden").slideUp(); 
         } else {
-            $("#toDoList__expanded__hidden").slideDown(); 
+            $("#kakaoTalk__expanded-hidden").slideDown(); 
         } });
+
+    $("#toDoListBtn").click(function(){
+        if ($("#toDoList__expanded-hidden").is(":visible")){
+            $("#toDoList__expanded-hidden").slideUp(); 
+        } else {
+            $("#toDoList__expanded-hidden").slideDown(); 
+        } });            
+
+
 });
 
 
+ // 스크롤 이동    
 // window.addEventListener("wheel", function(e){
 //     e.preventDefault();
 // },{passive : false});
 
-//  // 스크롤 이동    
-// const btn = document.querySelectorAll('.scrollButton>li');
-// const target_1 = document.querySelector('.a1');
-// const target_2 = document.querySelector('.a2');
-// const target_3 = document.querySelector('.a3');
+
+// const target_1 = document.querySelector('.section_1');
+// const target_2 = document.querySelector('.section_2');
+// const target_3 = document.querySelector('.section_3');
 
 // const target_dict = {0: 0, 1: target_1, 2: target_2, 3: target_3}
 // var page = 1;
