@@ -1,149 +1,90 @@
-.intro {
+main {
   font-family: "Dongle", sans-serif;
-  margin-top: 10vh;
-}
-
-.intro-me {
-  display: flex;
-  justify-content: center;
-  margin: 5vh 2vw;
-}
-
-.intro-me__title {
-  font-size: 3.5rem;
-  line-height: 5rem;
-  text-align: center;
-  padding-right: 25%;
-}
-
-.intro-me__contents {
-  font-size: 2rem;
-  letter-spacing: 1px;
-  margin: 1vh 2vw;
-  padding: 0 2vw;
-  line-height: 2rem;
-  text-align: center;
-}
-
-.intro-me__img > img {
-  max-width: 450px;
-}
-
-/* 테두리 번짐 효과 */
-.intro-me__img:after {
-  position: absolute;
-  display: block;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 0 50px 20px inset var(--back-color),
-    0 0 50px 20px inset var(--back-color), 0 0 50px 20px inset var(--back-color),
-    0 0 50px 20px inset var(--back-color);
-}
-
-@media screen and (max-width: 768px) {
-  .intro-me {
-    flex-direction: column;
-  }
-
-  .intro-me__img img {
-    max-width: 100%;
-  }
-}
-
-/* 슬라이드에 버튼 */
-.intro__prev-btn,
-.intro__next-btn {
-  border-radius: 4px;
-  background-color: var(--back-color);
-  border: none;
+  margin-top: 30vh;
+  overflow-x: hidden;
   color: var(--font-color);
-  font-family: "Josefin Sans", sans-serif;
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 2vh;
-  width: 150px;
-  cursor: pointer;
-  margin: 5px 5vw;
+  font-size: 2rem;
 }
 
-.intro__prev-btn span,
-.intro__next-btn span {
-  cursor: pointer;
-  display: inline-block;
+.curtain {
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  background: var(--font-color);
+  /* 각도 조절 */
+  transform: skewX(-5deg) translateX(-50px);
+  transition: 2s all ease-in-out;
+}
+
+.curtain__contents {
   position: relative;
-  transition: 0.5s;
+  height: 100%;
+  padding: 100px 10vw;
+  color: var(--back-color);
+  z-index: 2;
+  font-size: 5rem;
 }
 
-/* :after 가상 요소, content 필수 */
-.intro__prev-btn span:after {
-  content: "\00ab";
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: -20px;
-  transition: 0.5s;
+.curtain__leaf {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: var(--back-color);
+  color: var(--font-color);
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding: 10px 40px;
 }
 
-.intro__next-btn span:after {
-  content: "\00bb";
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+.curtain__animation {
+  animation: anim 3s ease-in-out;
 }
 
-.intro__prev-btn:hover span {
-  padding-left: 25px;
+@keyframes anim {
+  0% {
+  }
+  20% {
+    z-index: 3;
+    \transform: skewX(5deg) translateX(-100%);
+  }
+  40% {
+    transform: skewX(0deg) translateX(0);
+    width: 100%;
+    z-index: 3;
+    box-shadow: 10px 10px 5px #eaeaea;
+  }
+  60% {
+    transform: skewX(3deg) translateX(0);
+    width: 100%;
+    z-index: 3;
+    box-shadow: 10px 10px 5px #eaeaea;
+  }
+  80% {
+    transform: skewX(1deg) translateX(-100%);
+    width: 60%;
+    z-index: 3;
+    box-shadow: 10px 10px 5px #eaeaea;
+  }
+  100% {
+    transform: skewX(-5deg) translateX(-50px);
+    width: 30%;
+    z-index: 1;
+    box-shadow: none;
+  }
 }
 
-.intro__next-btn:hover span {
-  padding-right: 25px;
+@media screen and (max-width: 1000px) {
+  .curtain__contents {
+    padding: 100px 2vw;
+  }
 }
 
-.intro__prev-btn:hover span:after {
-  opacity: 1;
-  left: 0;
+.intro__container {
+  margin-left: 50%;
 }
 
-.intro__next-btn:hover span:after {
-  opacity: 1;
-  right: 0;
+.intro__img img {
+  width: 100px;
+  height: 100px;
 }
-
-/* mmmmmmmmmmmmmmmmmmmm */
-
-/* .intro-slideshow__container {
-  background: var(--mint-color);
-  padding: 10px 10px;
-  margin-bottom: 20px;
-}
-
-.slide {
-  display: none;
-  padding: 80px;
-  text-align: center;
-}
-
-.intro-dot__container {
-  text-align: center;
-}
-
-.intro-dot {
-  cursor: pointer;
-  height: 12px;
-  width: 12px;
-  margin: 0 2px;
-  background-color: rgb(197, 197, 197);
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.move,
-.intro-dot:hover {
-  background-color: var(--mint-color);
-} */

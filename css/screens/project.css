@@ -7,15 +7,19 @@ main {
 .project__container {
   background-color: var(--font-color);
   color: var(--back-color);
-  padding: 25vh 5vw;
+  padding: 25vh 5vw 10vh 5vw;
   font-size: 3rem;
+  width: 80%;
+  position: absolute;
+  left: 5%;
 }
 
 .project__row {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
+/* 사진과 글씨의 여백 */
 .section_1 .project__explanation,
 .section_2 .project__slider-controls,
 .section_3 .project__explanation {
@@ -62,7 +66,11 @@ main {
 /* ------------------------- */
 
 .project__contents {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+}
+
+.project__url {
+  padding-right: 50px;
 }
 
 .project__slider li img {
@@ -82,9 +90,15 @@ main {
 .project__slider-controls .bx-next {
   visibility: hidden;
   position: absolute;
-  top: 50%;
+  top: 280px;
   transform: translateY(-50%);
   color: var(--font-color);
+}
+
+/* section3 이미지 크기가 달라서 버튼 위치 따로 지정 */
+.section_3 .project__slider-controls .bx-prev,
+.section_3 .project__slider-controls .bx-next {
+  top: 180px;
 }
 
 .project__slider-controls .bx-prev {
