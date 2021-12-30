@@ -34,17 +34,17 @@ $(document).ready(function(){
 });
 
 
- // 스크롤 이동    
+// //  스크롤 이동    
 // window.addEventListener("wheel", function(e){
 //     e.preventDefault();
 // },{passive : false});
 
 
 // const target_1 = document.querySelector('.section_1');
-// const target_2 = document.querySelector('.section_2');
-// const target_3 = document.querySelector('.section_3');
+// // const target_2 = document.querySelector('.section_2');
+// // const target_3 = document.querySelector('.section_3');
 
-// const target_dict = {0: 0, 1: target_1, 2: target_2, 3: target_3}
+// // const target_dict = {0: 0, 1: target_1, 2: target_2, 3: target_3}
 // var page = 1;
 // var mHtml = $("html");
 
@@ -63,7 +63,7 @@ $(document).ready(function(){
 //     if(page==1) {
 //         var posTop = 0
 //     } else {
-//         var posTop =(page-1) * $(target_dict[page]).height();
+//         var posTop =(page-1) * $(target_1).height() + 250;
 //     }
 //     // 페이지 높이가 전부 다르기 떄문에 (page-1 *)를 사용할 수 없음
 
