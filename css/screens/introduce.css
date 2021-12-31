@@ -1,87 +1,12 @@
 .intro {
   font-family: "Dongle", sans-serif;
   margin-top: 30vh;
-  overflow-x: hidden;
   color: var(--font-color);
   font-size: 2rem;
 }
 
-.curtain {
-  position: absolute;
-  height: 100%;
-  width: 30%;
-  background: var(--font-color);
-  /* 각도 조절 */
-  transform: skewX(-5deg) translateX(-50px);
-  transition: 2s all ease-in-out;
-}
-
-.curtain__contents {
-  position: relative;
-  height: 100%;
-  padding: 100px 10vw;
-  color: var(--back-color);
-  z-index: 2;
-  font-size: 5rem;
-}
-
-.curtain__leaf {
-  outline: none;
-  border: none;
-  text-decoration: none;
-  text-transform: uppercase;
-  background: var(--back-color);
-  color: var(--font-color);
-  box-sizing: border-box;
-  margin-top: 20px;
-  padding: 10px 40px;
-}
-
-.curtain__animation {
-  animation: anim 3s ease-in-out;
-}
-
-@keyframes anim {
-  0% {
-  }
-  20% {
-    z-index: 3;
-    \transform: skewX(5deg) translateX(-100%);
-  }
-  40% {
-    transform: skewX(0deg) translateX(0);
-    width: 100%;
-    z-index: 3;
-    box-shadow: 10px 10px 5px #eaeaea;
-  }
-  60% {
-    transform: skewX(3deg) translateX(0);
-    width: 100%;
-    z-index: 3;
-    box-shadow: 10px 10px 5px #eaeaea;
-  }
-  80% {
-    transform: skewX(1deg) translateX(-100%);
-    width: 60%;
-    z-index: 3;
-    box-shadow: 10px 10px 5px #eaeaea;
-  }
-  100% {
-    transform: skewX(-5deg) translateX(-50px);
-    width: 30%;
-    z-index: 1;
-    box-shadow: none;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .curtain__contents {
-    padding: 100px 2vw;
-  }
-}
-
 .intro__container {
-  margin-left: 50%;
+  margin: 10vh 10vw;
 }
 
 .intro__img img {

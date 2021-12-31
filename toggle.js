@@ -10,9 +10,3 @@ toggleBtn.addEventListener("click", () => {
     icons.classList.toggle("active");
 });
 
-
-// introduce 애니메이션창
-$( ".curtain__leaf" ).click(function() {
-    $( ".curtain").toggleClass( "curtain__animation" );
-    
-  });
