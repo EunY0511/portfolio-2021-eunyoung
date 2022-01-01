@@ -1,0 +1,45 @@
+.slide-in {
+  animation: slide-in 1.75s ease;
+}
+
+.slide-out {
+  animation: slide-out 1.75s ease;
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translate(-120%);
+  }
+  25% {
+    transform: translate(-120%) scale(0.8);
+  }
+  75% {
+    transform: scale(0.8);
+    transition-timing-function: ease-out;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in {
+  25% {
+    transform: scale(0.8);
+  }
+  75% {
+    transform: translate(120%) scale(0.8);
+    transition-timing-function: ease-out;
+  }
+  100% {
+    transform: translate(120%) scale(1);
+  }
+}
+
+section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: gray;
+}
