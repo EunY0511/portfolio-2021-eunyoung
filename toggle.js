@@ -10,7 +10,7 @@ toggleBtn.addEventListener("click", () => {
     icons.classList.toggle("active");
 });
 
-// ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+// ㅡㅡㅡㅡㅡㅡㅡㅡㅡ화면 전환 애니메이션ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
 const clickBtn = document.getElementById("homeBtn");
 var link = document.location.href;
