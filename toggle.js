@@ -12,23 +12,23 @@ toggleBtn.addEventListener("click", () => {
 
 // ㅡㅡㅡㅡㅡㅡㅡㅡㅡ화면 전환 애니메이션ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
-const clickBtn = document.getElementById("homeBtn");
-var link = document.location.href;
+// const clickBtn = document.getElementById("homeBtn");
+// var link = document.location.href;
 
-btn_dict = {"Home": 0, "Introduce": 1, "My Project": 2, "Guest Book": 3}
-link_dict = {"http://127.0.0.1:5501/index.html#": 0,
-             "http://127.0.0.1:5501/introduce.html#": 1,
-             "http://127.0.0.1:5501/project.html#": 2,
-             "http://127.0.0.1:5501/guest-book.html#": 3}
+// btn_dict = {"Home": 0, "Introduce": 1, "My Project": 2, "Guest Book": 3}
+// link_dict = {"http://127.0.0.1:5501/index.html#": 0,
+//              "http://127.0.0.1:5501/introduce.html#": 1,
+//              "http://127.0.0.1:5501/project.html#": 2,
+//              "http://127.0.0.1:5501/guest-book.html#": 3}
 
 
-function btnClick(event) {
-    event.preventDefault();
-    const target =  event.target;
+// function btnClick(event) {
+//     event.preventDefault();
+//     const target =  event.target;
 
-    const presentPage = link_dict[link]
-    const nextPage = btn_dict[target.text]
+//     const presentPage = link_dict[link]
+//     const nextPage = btn_dict[target.text]
 
-    }
+//     }
 
-menu.addEventListener("click", btnClick);
+// menu.addEventListener("click", btnClick);
