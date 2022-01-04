@@ -5,7 +5,7 @@
   margin: 25vh 0;
 }
 
-.intro__slider-controls {
+.bx-controls {
   position: relative;
 }
 
@@ -21,40 +21,27 @@
   margin-right: 100px;
 }
 
-/* 이미지 hover시 버튼 보이게 하려고 */
-.intro__slider-controls .bx-prev,
-.intro__slider-controls .bx-next {
-  visibility: hidden;
+.bx-controls-direction .bx-prev,
+.bx-controls-direction .bx-next {
   position: absolute;
-  /* top: 100px;
-  transform: translateY(-50%); */
+  top: -150px;
 }
 
-.intro__slider-controls .bx-prev {
+.bx-controls-direction .bx-prev {
+  left: 20%;
+}
+
+.bx-controls-direction .bx-next {
+  left: 80%;
+}
+
+.bx-has-controls-direction .bx-pager {
+  position: absolute;
   left: 50%;
-}
-
-/* 반응형으로 화면 줄어들 때, 버튼이 이미지 위에
-   그대로 고정되게 하려고 left 기준으로 잡아줌. */
-.intro__slider-controls .bx-next {
-  left: 60%;
-}
-
-.intro__slider-controls .bx-pager {
-  position: absolute;
-  left: 300px;
-  transform: translateX(50%);
+  top: 70px;
   font-size: 1.5rem;
 }
 
-.intro__container:hover {
-  opacity: 0.5;
-}
-
-/* 사진 hover시 bx-prev, bx-next 버튼이 나타나게끔 작동하려면
- project__slider-controls의 자손이어야 함.
- project__slider에 hover하면 부모에 해당 안되므로 
- 아무 일도 일어나지 않음. */
 .intro__slider-controls:hover .bx-prev,
 .intro__slider-controls:hover .bx-next {
   visibility: visible;

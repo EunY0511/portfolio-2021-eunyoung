@@ -90,15 +90,19 @@ main {
 .project__slider-controls .bx-next {
   visibility: hidden;
   position: absolute;
-  top: 280px;
-  transform: translateY(-50%);
+  transform: translateY(-500%);
+  top: -40px;
   color: var(--font-color);
 }
 
 /* section3 이미지 크기가 달라서 버튼 위치 따로 지정 */
 .section_3 .project__slider-controls .bx-prev,
 .section_3 .project__slider-controls .bx-next {
-  top: 180px;
+  top: 100px;
+}
+
+.section_3 .project__slider-controls .bx-next {
+  right: 15%;
 }
 
 .project__slider-controls .bx-prev {
